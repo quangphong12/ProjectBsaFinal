@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60.5" height="60.5" viewBox="0 0 60.5 60.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5f189;
+      }
+
+      .cls-2 {
+        fill: #3c308c;
+      }
+
+      .cls-3 {
+        filter: url(#Path_23);
+      }
+    </style>
+    <filter id="Path_23" x="0" y="0" width="60.5" height="60.5" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_4" data-name="Group 4" transform="translate(-70 -1)">
+    <g id="Group_6" data-name="Group 6" transform="translate(-28.132 10)">
+      <g class="cls-3" transform="matrix(1, 0, 0, 1, 98.13, -9)">
+        <path id="Path_23-2" data-name="Path 23" class="cls-1" d="M25,0A25,25,0,1,1,0,25,25,25,0,0,1,25,0Z"/>
+      </g>
+      <g id="clock" transform="translate(109 2.51)">
+        <path id="Path_21" data-name="Path 21" class="cls-2" d="M23.5,34.868A11.368,11.368,0,1,1,34.868,23.5,11.4,11.4,0,0,1,23.5,34.868ZM23.5,10A13.5,13.5,0,1,0,37,23.5,13.494,13.494,0,0,0,23.5,10Z" transform="translate(-9 -10)"/>
+        <path id="Path_22" data-name="Path 22" class="cls-2" d="M47.421,28H46v7.105a.6.6,0,0,0,.213.5l5.009,5.009.995-.995-4.8-4.8Z" transform="translate(-33.211 -21.605)"/>
+        <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-2" cx="0.679" cy="0.679" r="0.679" transform="translate(13.759 3.736)"/>
+        <ellipse id="Ellipse_5" data-name="Ellipse 5" class="cls-2" cx="0.679" cy="0.68" rx="0.679" ry="0.68" transform="translate(13.759 21.389)"/>
+        <ellipse id="Ellipse_6" data-name="Ellipse 6" class="cls-2" cx="0.68" cy="0.679" rx="0.68" ry="0.679" transform="translate(2.895 11.883)"/>
+        <circle id="Ellipse_7" data-name="Ellipse 7" class="cls-2" cx="0.679" cy="0.679" r="0.679" transform="translate(21.906 11.883)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    background: rgb(2, 0, 36);
+    background-color: #fff;
+}
+
+.dropbtn {
+    background-color: #fff;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    margin-top: -200px;
+
+}
+.table{
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+.container col-6{
+    width: 100%;
+}
+#test{
+    border:3px ;
+    width:80%;
+    height:30rem;
+    padding:20px;
+    margin-left: 20%;
+    overflow:scroll;
+}
+h1{ margin-left: 20%;
+    background-color: #1ab7ea;
+    width: 23rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+.menu{
+    position:relative;
+    margin-left: 120px;
+    margin-top: -600px;
+    width: 10rem;
+    height: 10rem;
+
+}
+.bang {
+    width: 100%;
+    height: 45rem ;
+    margin-top: 200px;
+
+}
+
+tr:nth-of-type(even) {
+    background: #e9e9e9;
+}
+tr:nth-of-type(odd) {
+    background: #FFFFFF;
+}
+
+th{
+    background-color: #0d6aad;
+    color: #FFFFFF;
+}
+
+

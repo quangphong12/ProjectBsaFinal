@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order car</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/rent.css}">
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+    <link rel="preconnect " href="https://fonts.googleapis.com ">
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@500&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,600;1,500&display=swap " rel="stylesheet ">
+</head>
+
+<body>
+
+<div class="dropdown " style="float:left; left: 132px; top: 61px; ">
+    <img th:src="@{/img/icon1.svg}" width="161.16 ">
+</div>
+<div class="dropdown " style="float:right; left:-132px; top:86.4px; ">
+    <img th:src="@{/img/wave.png}">
+    <div class="dropdown-content ">
+        <p><a href="/user/index_user ">Trang chủ</a>
+            <a href="/user/introduction_user ">Giới thiệu</a>
+            <a href="/user/orderbus ">Vận tải hành khách</a>
+            <a href="/user/rentcar ">Thuê xe</a>
+            <a href="/user/Voucher">Đổi Voucher</a>
+            <a href="/user/recruitment_user ">Tuyển dụng</a>
+            <a href="/user/profile "> Thông tin cá nhân </a>
+            <a href="/account/logout ">Logout</a></p>
+    </div>
+</div>
+
+
+<div class="ticket">
+    <h1>SharkRental
+    </h1>
+    <div class="menu">
+        <img th:src="@{/img/SharkRental.svg}" width="100%">
+    </div>
+    <div class="ren">
+        <img th:src="@{/img/iiiiii.svg}" width="100%">
+    </div>
+    <form th:action="@{/user/saverentcar}" th:object="${rent}" method="post">
+        <div class="form-group row ">
+            <label class="col-4 col-form-label "> </label>
+            <div class="col-8 "> <img th:src="@{/img/Picture1.svg}" width="27px" height="27px">
+<!--                <input type="datetime-local" th:field="*{dateTimeBegin}" placeholder="Ngày & Giờ nhận xe" class="form-control" required />-->
+                <input type="text" onfocus="(this.type='datetime-local')" onblur="(this.type='text')" th:field="*{dateTimeBegin}" placeholder="Ngày & Giờ nhận xe" class="form-control" required/>
+
+            </div>
+        </div>
+        <div class="form-group row ">
+            <label class="col-4 col-form-label "> </label>
+            <div class="col-8 "> <img th:src="@{/img/Picture1.svg}" width="27px" height="27px">
+<!--                <input type="datetime-local" th:field="*{dateTimeEnd}" placeholder="Ngày & Giờ trả xe" class="form-control" required/>-->
+                <input type="text" onfocus="(this.type='datetime-local')" onblur="(this.type='text')" th:field="*{dateTimeEnd}" placeholder="Ngày & Giờ trả xe" class="form-control" required/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label"></label>
+            <div class="col-8"> <img th:src="@{/img/Picture6.svg}"width="27px" height="27px">
+                <input type="text" th:field="*{place}" class="form-control" placeholder="Số nhà - Đường - Quận/Huyện" required />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label"> </label>
+            <div class="col-8"> <img th:src="@{/img/city.svg}"width="27px" height="27px">
+                <select class="form-control" name="city">
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="Bắc Giang">Bắc Giang </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label"></label>
+            <div class="col-8"> <img th:src="@{/img/seat.png}" width="27px" height="27px">
+                <select class="form-control" name="type">
+                    <option value="5"> 5 chỗ </option>
+                    <option value="7">7 chỗ </option>
+                    <option value="16">16 chỗ </option>
+                    <option value="29">29 chỗ </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label"> </label>
+            <div class="col-8"><img th:src="@{/img/car.png}" width="27px" height="27px">
+                <select class="form-control" name="carCompany">
+                    <option value="Toyota"> Toyota </option>
+                    <option value="Kia"> Kia </option>
+                    <option value="Ford"> Ford </option>
+                    <option value="Huyndai"> Huyndai </option>
+                    <option value="Honda"> Honda </option>
+                    <option value="Mercedes"> Mercedes </option>
+                    <option value="Vinfast"> Vinfast  </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label"> </label>
+            <div class="col-8 "> <img th:src="@{/img/road.png}" width="27px" height="27px">
+                <select class="form-control" name="typeRent">
+                    <option value="Nội thành"> Nội thành </option>
+                    <option value="Nội bài"> Nội bài </option>
+                    <option value="Ngoại thành"> Ngoại thành </option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+    </form>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+    body {
+        background-color: #426EBD;
+        font-family: 'Montserrat Alternates', sans-serif;
+    }
+    
+    .menu {
+        width: 30%;
+        height: 500px;
+        margin-left: 35%;
+        margin-top: 0;
+        position: relative;
+        padding: 10px;
+        box-shadow: -10px -10px rgba(68, 211, 236, 0.842);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .form-group {
+        margin-left: 30px;
+        top: 100px;
+    }
+    
+    .vayca {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: 48px;
+        left: 47%;
+        z-index: 5;
+    }
+    
+    input.form-control {
+        border-radius: 30px;
+        font-size: 18px;
+        height: 20%;
+        width: 260%;
+        color: #426EBD;
+        border: 2px solid #CAE1F6;
+        background-color: #fff;
+    }
+    
+    select.form-control {
+        border-radius: 30px;
+        font-size: 17px;
+        height: 20%;
+        width: 100%;
+        color: #426EBD;
+        border: 2px solid #CAE1F6;
+        background-color: #fff;
+    }
+    
+    input.form-control::placeholder {
+        color: #426EBD;
+    }
+    
+    form {
+        width: 30%;
+        margin: 70px;
+    }
+    
+    button {
+        position: relative;
+        margin-left: 80%;
+        margin-top: 20%;
+        border-radius: 40px;
+        background-color: #426EBD;
+        width: 80%;
+        height: 30px;
+        color: #ffffff;
+
+    }
+    
+    lab {
+        font-weight: 400;
+        size: 20px;
+    }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Trang chủ </title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+    <script src="/js/jquery.fullpage.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<div id="fullpage">
+    <header>
+        <div class="backgr">
+            <img th:src="@{/img/slide1.png}" width="85%">
+        </div>
+
+        <div class="dropdown" style="float:left; left: 120px; top: 50px;">
+            <img th:src="@{/img/icon1.svg}" width="161.16">
+        </div>
+        <div class="dropdown" style="float:right; left:-132px; top:86.4px;">
+            <img th:src="@{/img/wave.png}">
+            <div class="dropdown-content">
+                <a href="/user/index_user">Trang chủ</a>
+                <a href="/user/introduction_user">Giới thiệu</a>
+                <a href="/user/orderbus">Vận tải hành khách</a>
+                <a href="/user/rentcar">Thuê xe</a>
+                <a href="/user/Voucher">Đổi Voucher</a>
+                <a href="/user/recruitment_user">Tuyển dụng</a>
+                <a href="/user/profile"> Thông tin cá nhân </a>
+                <a href="/account/logout">Logout</a>
+            </div>
+        </div>
+        <div class="xe">
+            <img th:src="@{/img/busslide1.gif}">
+
+
+        </div>
+
+        <div class="hbh1">
+
+            <img th:src="@{/img/sales-handover-blog-image.jpeg}" height="100% ">
+
+
+        </div>
+
+        <div class="hbh2">
+            <img th:src="@{/img/group-of-coaches.jpg}" height="100%">
+
+        </div>
+        <div class="hbh3">
+            <img th:src="@{/img/Limousine-16-lux-2.jpg}" height="100%">
+
+        </div>
+        <div class="hbh4 ">
+            <img th:src="@{/img/1489497123005.jpg--extra_handover_time_urged_for_new_cars_.jpg}" height="100%">
+
+        </div>
+        <div class="hbh5">
+            <img th:src="@{/img/Bản sao của sqrrent.jpg}" width="150%" height="120%">
+
+        </div>
+
+        <div class="backgr">
+            <img th:src="@{img/slide1.png}" width="100%">
+        </div>
+    </header>
+
+    <section>
+        <img th:src="@{/img/slide2.png}" width="100% " height="755px ">
+
+    </section>
+
+    <section>
+        <img th:src="@{/img/slide3.png}" width="100% " height="755px ">
+    </section>
+
+    <section>
+        <h1>
+            <img th:src="@{/img/slide4.png}" width="100% " height="755px "></h1>
+    </section>
+    <section>
+        <h1> <img th:src="@{/img/slide5.png}" width="100% " height="755px "></h1>
+    </section>
+</div>
+
+<script type="text/javascript ">
+    FastClick.attach(document.body);
+    $('#fullpage').fullpage();
+</script>
+
+
+
+
+
+</body>
+
+</html>

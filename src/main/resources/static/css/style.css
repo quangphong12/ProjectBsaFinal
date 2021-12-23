@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 100%;
+}
+
+#fullpage {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#fullpage section {
+    height: 100vh;
+}
+
+#fullpage section h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 10em;
+    text-transform: uppercase;
+}
+
+#fullpage section:nth-child(1) {
+    background: rgb(255, 253, 253);
+}
+
+#fullpage section:nth-child(2) {
+    background: #ff0;
+}
+
+#fullpage section:nth-child(3) {
+    background: #f0f;
+}
+
+#fullpage section:nth-child(4) {
+    background: rgb(59, 231, 43);
+}
+
+#fullpage section:nth-child(5) {
+    background: rgb(38, 3, 194);
+}
+
+.dropbtn {
+    background-color: #fafafa;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #6cc5ee;
+}
+
+.xe {
+    transform: scaleX(-1);
+    position: fixed;
+    margin-top: 200px;
+    margin-left: 55%;
+    clip-path: polygon(79% 31%, 100% 39%, 100% 100%, 0 100%, 0 0);
+
+}
+
+.hbh1 {
+    width: 210px;
+    height: 210px;
+    position: relative;
+    top: 150px;
+    left: 1%;
+    opacity: 1;
+}
+
+.hbh1:hover {
+    width: 210px;
+    height: 210px;
+    position: relative;
+    top: 150px;
+    left: 1%;
+    opacity: 0;
+}
+
+.hbh2 {
+    width: 210px;
+    height: 210px;
+    position: relative;
+    top: 250px;
+    left: 1%;
+    opacity: 1;
+}
+
+.hbh2:hover {
+    width: 210px;
+    height: 210px;
+    position: relative;
+    top: 250px;
+    left: 1%;
+    opacity: 0;
+}
+
+.hbh3 {
+    width: 420px;
+    height: 210px;
+    position: relative;
+    top: -400px;
+    left: 25%;
+    opacity: 1;
+}
+
+.hbh3:hover {
+    width: 420px;
+    height: 210px;
+    position: relative;
+    top: -400px;
+    left: 25%;
+    opacity: 0;
+}
+
+.hbh4 {
+    width: 210px;
+    height: 200px;
+    position: relative;
+    top: -320px;
+    left: 25%;
+    opacity: 1;
+}
+
+.hbh4:hover {
+    width: 210px;
+    height: 200px;
+    position: relative;
+    top: -320px;
+    left: 25%;
+    opacity: 0;
+}
+
+.hbh5 {
+    width: 210px;
+    height: 210px;
+    position: relative;
+    top: -280px;
+    left: 25%;
+    opacity: 1;
+}
+
+.hbh5:hover {
+    width: 210px;
+    height: 210px;
+    position: relative;
+    top: -300px;
+    left: 25%;
+    opacity: 0;
+}
+
+.backgr {
+    position: relative;
+    width: 1920px;
+}
+
+.backgr {
+    position: absolute;
+    margin-top: -20px;
+}

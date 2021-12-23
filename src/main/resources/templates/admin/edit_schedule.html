@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chỉnh sửa thông tin đặt vé xe</title>
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+    <!-- BOOTSTRAP STYLES-->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link th:href="@{/css/font-awesome.css}" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <link th:href="@{/css/basic.css}" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link th:href="@{/css/custom.css}" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/admin/index_admin">BLUE Shark</a>
+            </div>
+
+            <div class="header-right">
+
+
+
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a  href="/admin/index_admin"><i class="fa fa-home "></i>TRANG CHU</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active-menu-top"><i class="fa fa-pencil-square-o "></i>EDIT<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse in">
+                            <li>
+                                <a  href="/admin/edit_bus"><i class="fa fa-bus"></i>Edit bus</a>
+                            </li>
+                            <li>
+                                <a href="/admin/edit_driver"><i class="fa fa-male"></i>Edit driver</a>
+                            </li>
+                            <li>
+                                <a href="/admin/edit_rent"><i class="fa fa-car "></i>Edit rent</a>
+                            </li>
+
+                            <li>
+                                <a class="active-menu" href="/admin/edit_schedule"><i class="fa fa-calendar "></i>Edit schedule</a>
+                            </li>
+                            <li>
+                                <a href="/admin/edit_travel"><i class="fa fa-road"></i>Edit travel</a>
+                            </li>
+                            <li>
+                                <a href="/admin/edit_user"><i class="fa fa-users "></i>Edit user</a>
+                            </li>
+                            <li>
+                                <a href="/admin/edit_voucher"><i class="fa fa-users "></i>Edit voucher</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-plus "></i>Add<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/admin/add_bus"><i class="fa fa-bus"></i>Add bus</a>
+                            </li>
+                            <li>
+                                <a href="/admin/add_driver"><i class="fa fa-male "></i>Add driver</a>
+                            </li>
+                            <li>
+                                <a href="/admin/add_travel"><i class="fa fa-road "></i>Add travel</a>
+                            </li>
+
+
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-list-alt "></i>Full <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/admin/full_bus"><i class="fa fa-bus "></i>Full bus</a>
+                            </li>
+                            <li>
+                                <a href="/admin/full_driver"><i class="fa fa-male "></i>Full driver</a>
+                            </li>
+                            <li>
+                                <a href="/admin/full_rent"><i class="fa fa-car "></i>Full rent</a>
+                            </li>
+                            <li>
+                                <a href="/admin/full_schedule"><i class="fa fa-calendar "></i>Full scheduler</a>
+                            </li>
+                            <li>
+                                <a href="/admin/full_travel"><i class="fa fa-road "></i>Full travel</a>
+                            </li>
+                            <li>
+                                <a href="/admin/full_user"><i class="fa fa-users "></i>Full user</a>
+                            </li>
+                            <li>
+                                <a href="/admin/full_voucher"><i class="fa fa-users "></i>Full voucher</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">Edit schedule</h1>
+                        <h1 class="page-subhead-line">This is dummy text , you can replace it with your original text. </h1>
+
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <label th:text="'Hello: '+${session.USERNAME}"></label> </p>
+                            <h1>Thông tin đặt vé</h1>
+
+                            <form th:object="${schedule}" th:action="@{/admin/save_schedule}" action="#" method="post">
+                                <div>
+                                    <label th:for="idSchedule">ID </label> </br>
+                                    <input type="text" th:field="*{idSchedule}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="id">ID người dùng</label></br>
+                                    <input type="text" th:field="*{id}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="time">Thời gian đi</label></br>
+                                    <input type="text" th:field="*{time}" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="orderSeats">Số ghế đặt</label></br>
+                                    <input type="text" th:field="*{orderSeats}" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="dateSeats">Ngày khởi hành</label></br>
+                                    <input type="text" th:field="*{dateSeats}" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="place">Chuyến đi</label></br>
+                                    <input type="text" th:field="*{place}" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="date">Ngày đặt </label></br>
+                                    <input type="text" th:field="*{date}" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="date">Mã khuyến mãi </label></br>
+                                    <input type="text" th:field="*{voucher}" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="date">Tổng tiền </label></br>
+                                    <input type="text" th:field="*{total_money}" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="comment">Đánh giá </label></br>
+                                    <input type="text" th:field="*{comment}" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="enabled">Đã lấy sao đánh giá </label></br>
+                                    <input type="text" th:field="*{enabled}" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="check">Tình trạng</label></br>
+                                    <select class="form-control" name="check" th:field="*{check}">
+                                        <option value="Done"> Done </option>
+                                        <option value="Checking"> Checking </option>
+                                        <option value="Cancel">Cancel </option>
+                                    </select>
+                                </div>
+
+                                <input type="submit" class="btn btn-success" value="Save" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <h1>Thông tin người đặt vé</h1>
+
+                            <form th:object="${user}" th:action="@{save_schedule}" action="#" method="post">
+                                <div>
+                                    <label th:for="id">ID người dùng</label></br>
+                                    <input type="text" th:field="*{id}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="username">Tên tài khoản</label></br>
+                                    <input type="text" th:field="*{username}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="name">Tên người dùng</label></br>
+                                    <input type="text" th:field="*{name}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="gender">Giới tính</label></br>
+                                    <input type="text" th:field="*{gender}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="point">Điểm tích lũy</label></br>
+                                    <input type="text" th:field="*{point}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="phone">Số điện thoại</label></br>
+                                    <input type="text" th:field="*{phone}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="email">Email</label></br>
+                                    <input type="text" th:field="*{email}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="address">Địa chỉ</label></br>
+                                    <input type="text" th:field="*{address}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="date_of_birth">Ngày Sinh</label></br>
+                                    <input type="text" th:field="*{date_of_birth}" readonly="readonly" class="form-control" />
+                                </div>
+                                <div>
+                                    <label th:for="CMND">Số CMND</label></br>
+                                    <input type="text" th:field="*{CMND}" readonly="readonly" class="form-control" />
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+            </div>
+
+
+
+
+
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+    <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <div id="footer-sec">
+        &copy; BSA
+        <a href="" target="_blank"></a>
+    </div>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="/js/custom.js"></script>
+
+
+</body>
+
+</html>

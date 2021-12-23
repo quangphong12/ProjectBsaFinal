@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/info_voucher.css}">
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+    <link rel="preconnect " href="https://fonts.googleapis.com ">
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@500&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,600;1,500&display=swap " rel="stylesheet ">
+</head>
+
+<body>
+
+
+
+<div class="dropdown " style="float:left; left: 132px; top: 61px; ">
+    <img th:src="@{/img/icon1.svg}" width="161.16 ">
+</div>
+<div class="dropdown " style="float:right; left:-132px; top:86.4px; ">
+    <img th:src="@{/img/wave.png}">
+    <div class="dropdown-content ">
+        <p><a href="/user/index_user">Trang chủ</a>
+            <a href="/user/introduction_user">Giới thiệu</a>
+            <a href="/user/orderbus">Vận tải hành khách</a>
+            <a href="/user/rentcar">Thuê xe</a>
+            <a href="/user/Voucher">Đổi Voucher</a>
+            <a href="/user/recruitment_user">Tuyển dụng</a>
+            <a href="/user/profile"> Thông tin cá nhân </a>
+            <a href="/account/logout">Logout
+            </a>
+        </p>
+    </div>
+</div>
+
+
+<div class="ticket">
+    <form action="#" th:action="@{/user/savevoucher}" th:object="${voucher}" method="post">
+        <table>
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <h2>Danh mục </h2>-->
+
+<!--                </td>-->
+<!--                <td >-->
+<!--                    <h2>Mã Voucher</h2>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <br>-->
+            <tr>
+                <td> <h2>Mã Voucher</h2></td>
+                <td>
+                    <h2>Số lượng voucher</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td> <h2>VC10K</h2></td>
+                <td>
+
+                    <input type="text" th:field="*{VC10K}"  readonly="readonly" />
+                </td>
+            </tr>
+
+            <tr>
+                <td> <h2>VC20K</h2></td>
+                <td>
+
+                    <input type="text" th:field="*{VC20K}"  readonly="readonly" />
+                </td>
+            </tr>
+
+            <tr>
+                <td> <h2>VCG5P</h2></td>
+                <td>
+
+                    <input type="text" th:field="*{VCG5P}"   readonly="readonly" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+
+</div>
+
+
+<div class="menu">
+
+    <br>
+    <a href="/user/profile"><img th:src="@{/img/Group 7.svg}"> </a> <br>
+    <a href="/user/full_history"> <img th:src="@{/img/Group 4.svg}"> </a> <br>
+    <a href="/user/info_voucher"><img src="https://img.icons8.com/external-flat-02-chattapat-/64/000000/external-gift-black-friday-flat-02-chattapat-.png" width="50px"/> </a> <br>
+    <br>
+
+    <br />
+</div>
+
+
+
+
+</body>
+
+</html>

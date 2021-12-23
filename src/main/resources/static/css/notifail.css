@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    background-color: #ff3111;
+}
+
+.hcn {
+    margin-left: 25%;
+    background-color: #fff;
+    width: 50%;
+    height: 287px;
+    border-radius: 50px;
+    margin-top: -100px;
+    position: absolute;
+    padding: 10px;
+    box-shadow: 10px 20px rgba(0, 0, 0, 0.178);
+}
+
+.hcn h1 {
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.hcn h2 {
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 37px;
+    margin-top: 80px;
+    color: #707070;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 17px;
+    margin-top: 10px;
+    color: #707070;
+}
+
+.tick {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 150px;
+    left: 46rem;
+    z-index: 3;
+}
+
+.hinhtron {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 50px;
+    left: 49%;
+    z-index: 2;
+}
+
+.icon {
+    width: 10%;
+    height: 100px;
+    position: relative;
+    top: 120px;
+    left: 25%;
+    z-index: 5;
+}

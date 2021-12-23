@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Đánh giá</title>
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/comment_rent.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+<div class="container" style="margin-top: 30rem;">
+    <div class="row">
+
+        <div class="col-sm-12">
+            <h1>Đánh giá xe</h1>
+
+            <form th:action="@{/user/save_comment_rent}"  action="#" method="post">
+                <div>
+                    <label th:for="comment">Đánh giá </label> </br>
+                    <input type="text" th:name="comment" class="form-control"/>
+                </div>
+                <input type="submit" class="btn btn-success" value="Save"/>
+            </form>
+            <div class="background"> <img th:src="@{/img/core.svg}" /> </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

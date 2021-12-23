@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm chuyến xe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/orderbus.css}">
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+
+    <link rel="preconnect " href="https://fonts.googleapis.com ">
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
+<!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@500&display=swap " rel="stylesheet ">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap " rel="stylesheet ">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,600;1,500&display=swap " rel="stylesheet ">-->
+</head>
+
+<body>
+
+
+<div class="dropdown " style="float:left; left: 132px; top: 61px; ">
+    <img th:src="@{/img/icon1.svg}" width="161.16 ">
+</div>
+<div class="dropdown " style="float:right; left:-132px; top:86.4px; ">
+    <img th:src="@{/img/wave.png}">
+    <div class="dropdown-content ">
+        <p><a href="/user/index_user">Trang chủ</a><a href="/user/introduction_user">Giới thiệu</a> <a href="/user/orderbus">Vận tải hành khách</a> <a href="/user/rentcar">Thuê xe</a> <a href="/user/Voucher">Đổi Voucher</a> <a href="/user/recruitment_user">Tuyển dụng</a> <a href="/user/profile"> Thông tin cá nhân </a>                <a href="/account/logout">Logout</a></p>
+    </div>
+</div>
+
+<div class="text" ><h1>VẬN TẢI HÀNH KHÁCH</h1></div>
+
+<img th:src="@{/img/lotrinh.png}" style=" height:400px; width: 800px; margin-top: 20rem; margin-left: -10rem; ">
+<h2 class="search">Tìm chuyến đi </h2>
+<div class="ticket">
+
+    <form action="/user/check_id_travel" method="post">
+        <div class="form-group" style="position: absolute;
+    margin-left: 10%">
+            <label><img th:src="@{/img/clock.svg}" > </label>
+            <select class="form-control" name="travel">
+                <option value="06:00">6:00 </option>
+                <option value="06:30">6:30 </option>
+                <option value="07:00">7:00 </option>
+                <option value="07:30">7:30 </option>
+                <option value="08:00">8:00 </option>
+                <option value="08:30">8:30 </option>
+                <option value="09:00">9:00 </option>
+                <option value="09:30">9:30 </option>
+                <option value="10:00">10:00 </option>
+                <option value="10:30">10:30 </option>
+                <option value="11:00">11:00 </option>
+                <option value="11:30">11:30 </option>
+                <option value="12:00">12:00 </option>
+                <option value="12:30">12:30 </option>
+                <option value="13:00">13:00 </option>
+                <option value="13:30">13:30 </option>
+                <option value="14:00">14:00 </option>
+                <option value="14:30">14:30 </option>
+                <option value="15:00">15:00 </option>
+                <option value="15:30">15:30 </option>
+                <option value="16:00">16:00 </option>
+                <option value="16:30">16:30 </option>
+                <option value="17:00">17:00 </option>
+                <option value="17:30">17:30 </option>
+            </select>
+        </div>
+        <div class="form-group" style="margin-left: 50%" >
+            <label><img th:src="@{/img/tuyen.svg}"></label>
+            <select class="form-control" name="place">
+                <option value="Hà Nội - Bắc Giang">Hà Nội - Bắc Giang</option>
+                <option value="Bắc Giang - Hà Nội">Bắc Giang - Hà Nội</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+    </form>
+
+    <table class="table table-active" border="1"  bgcolor="#ffffff" width="100%" >
+        <tr>
+            <th>Thời gian</th>
+            <th>Lịch trình</th>
+            <th>Số ghế đã đặt</th>
+            <th>Số ghế trống</th>
+        </tr>
+        <tr th:each="travel : ${travel}">
+            <td th:text="${travel.travelTime}"></td>
+            <td th:text="${travel.place}"></td>
+            <td th:text="${travel.seatOrder}"></td>
+            <td th:text="${travel.seatEmpty}"></td>
+        </tr>
+    </table>
+    <table class="table table-active" border="1" bgcolor="#ffffff" width="100%">
+        <tr>
+            <th>Biển số xe</th>
+            <th>Tên xe</th>
+            <th>Số chỗ ngồi</th>
+            <th>Màu xe</th>
+        </tr>
+
+        <tr th:each="bus : ${bus}">
+            <td th:text="${bus.licensePlateBus}"></td>
+            <td th:text="${bus.nameBus}"></td>
+            <td th:text="${bus.seats}"></td>
+            <td th:text="${bus.color}"></td>
+        </tr>
+    </table>
+
+    <table class="table table-active" border="1"  bgcolor="#ffffff" width="100%">
+        <tr>
+            <th>Tên tài xế</th>
+            <th>Tuổi</th>
+            <th>Giới tính</th>
+            <th>Số điện thoại</th>
+            <th>Kinh nghiệm lái xe</th>
+        </tr>
+        <tr th:each="driver : ${driver}">
+            <td th:text="${driver.name}"></td>
+            <td th:text="${driver.age}"></td>
+            <td th:text="${driver.gender}"></td>
+            <td th:text="${driver.phoneDriver}"></td>
+            <td th:text="${driver.experiences}"></td>
+        </tr>
+    </table>
+    <p  style="color: red" th:text="${ERROR}" id="ERROR" onchange="Hide()"></p>
+    <div class="order">
+        <button type="button" class="button_order" id="btn"> <a href="/user/schedule"><img th:src="@{/img/button1.svg}" style="height: 60px;
+    width: 140px;
+    margin-left: 0px;"></a></button>
+    </div>
+</div>
+
+<img th:src="@{/img/xevietnam.png}" style=" height:700px; width: 1200px; margin-top:20px; margin-left: 11%;">
+
+<img th:src="@{/img/vanphongdaidien.png}" style=" height: 600px; width: 1000px; margin-top:20px; margin-left: 18%">
+
+
+</body>
+<footer style="background-color: #0A0A0A">
+    <img th:src="@{/img/footer1.png}" width="100%" height="300px">
+</footer>
+</html>

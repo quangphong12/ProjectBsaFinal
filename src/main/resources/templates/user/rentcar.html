@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/rentcar.css}">
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+</head>
+
+<body>
+
+
+<div class="dropdown " style="float:left; left: 132px; top: 61px; ">
+    <img th:src="@{/img/icon1.svg}" width="161.16 ">
+</div>
+<div class="dropdown " style="float:right; left:-132px; top:86.4px; ">
+    <img th:src="@{/img/wave.png}">
+    <div class="dropdown-content ">
+        <p><a href="/user/index_user">Trang chủ</a><a href="/user/introduction_user">Giới thiệu</a> <a href="/user/orderbus">Vận tải hành khách</a> <a href="/user/rentcar">Thuê xe</a><a href="/user/Voucher">Đổi Voucher</a> <a href="/user/recruitment_user">Tuyển dụng</a> <a href="/user/profile"> Thông tin cá nhân </a>                <a href="/account/logout">Logout</a></p>
+    </div>
+</div>
+
+<div class="text" ><h1>THUÊ XE</h1></div>
+
+<div class="bang">
+    <table class="table table-active" border="1">
+        <tr>
+            <th>Nội dung </th>
+            <th>Loại xe</th>
+            <th>Nội bài<br>( 2 chiều )</th>
+            <th>Ngoại thành <br>( 1 km )</th>
+            <th>Nội thành <br>( 7 - 18h )</th>
+            <th>Ngoài giờ <br>( 1 Giờ )</th>
+        </tr>
+        <tr>
+            <td>4 chỗ </td>
+            <td>- Toyota Vios<br>- Honda City</td>
+            <td>500.000</td>
+            <td>5.500</td>
+            <td>1.000.000</td>
+            <td>60.000</td>
+        </tr>
+        <tr>
+            <td>7 chỗ </td>
+            <td>- Ford Everest<br>- Toyota Innova G</td>
+            <td>600.000</td>
+            <td>6.000</td>
+            <td>1.100.000</td>
+            <td>60.000</td>
+        </tr>
+        <tr>
+            <td>16 chỗ </td>
+            <td>- Ford Transit<br>- Mẻ Sprinter</td>
+            <td>700.000</td>
+            <td>7.000</td>
+            <td>1.400.000</td>
+            <td>70.000</td>
+        </tr>
+        <tr>
+            <td>29 chỗ </td>
+            <td>- Hyundai Country</td>
+            <td>900.000</td>
+            <td>10.000</td>
+            <td>1.5000.000</td>
+            <td>80.000</td>
+        </tr>
+        <tr>
+            <td>45 chỗ </td>
+            <td>- Hyundai HiClass<br>- Hyundai Universe</td>
+            <td>1.600.000</td>
+            <td>15.000</td>
+            <td>2.300.000</td>
+            <td>100.000</td>
+        </tr>
+    </table>
+</div>
+<div class="book">
+    <a href="/user/rent"><img th:src="@{/img/button.svg}" width="200rem"/></a>
+</div>
+
+<div class="morong">
+
+
+    <table style="width: 100%;border-collapse: collapse">
+        <tr>
+            <td>
+            <td>
+                <p> Với số lượng mẫu mã đa dạng, chúng tôi đảm bảo mang đến cho khách hàng đầy đủ tiện nghi nhật cùng như dịch vụ tốt nhật có thể.</p>
+            </td>
+            <td>
+                <img th:src="@{/img/Hceecc771b29c414da7e16926bbc7b8826.svg}">
+            </td>
+
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <p>Chúng tôi có phục vụ đầy đủ các nhu cầu của khách hàng như: xe du lịch, xe đám cưới,.... </p>
+            </td>
+            <td>
+                <img th:src="@{/img/911-tus-cab-modelimage-sideshot.svg}">
+            </td>
+        </tr>
+
+        <td>
+        <td>
+            <p>Đội ngũ nhân viễn sẽ giúp bạn luôn có một chiếc xe gọn gàng, sạch sẽ,...</p>
+            <p>Mọi mối lo về virus của bạn được xua tan vì chúng tôi có quy trình dọn rửa khử khuẩn mỗi khi xe về bãi.</p>
+        </td>
+
+        <td> <img th:src="@{/img/dung-long-nhiet-tinh-de-thuc-day-nhung-nguoi-khac-4.svg}">
+        </td>
+        </tr>
+
+        <td>
+        <td>
+            <p>Cuối cùng, bạn sẽ tiết kiệm được nhiều thời gian. Chỉ sau 30 phút bạn sẽ nhận được xe (nội thành) và 2h đối với những tính lân cận </p>
+        </td>
+        <td><img th:src="@{/img/dst-1-2.svg}"></td>
+        </td>
+
+    </table>
+
+</div>
+<footer style="background-color: #0A0A0A;
+        margin-top: 50rem">
+    <img th:src="@{/img/footer1.png}" width="100%" height="300px">
+</footer>
+</body>
+
+</html>

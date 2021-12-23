@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đặt chỗ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/schedule.css}">
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+    <link rel="preconnect " href="https://fonts.googleapis.com ">
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@500&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,600;1,500&display=swap " rel="stylesheet ">
+</head>
+
+<body>
+
+<div class="dropdown " style="float:left; left: 132px; top: 61px; ">
+    <img th:src="@{/img/icon1.svg}" width="161.16 ">
+</div>
+<div class="dropdown " style="float:right; left:-132px; top:86.4px; ">
+    <img th:src="@{/img/wave.png}">
+    <div class="dropdown-content ">
+        <p><a href="/user/index_user">Trang chủ</a><a href="/user/introduction_user">Giới thiệu</a> <a href="/user/orderbus">Vận tải hành khách</a> <a href="/user/rentcar">Thuê xe</a> <a href="/user/Voucher">Đổi Voucher</a> <a href="/user/recruitment_user">Tuyển dụng</a> <a href="/user/profile"> Thông tin cá nhân </a>                <a href="/account/logout">Logout</a></p>
+    </div>
+</div>
+<div class="ticket">
+    <h1>SharkTicket
+    </h1>
+    <div class="menu">
+        <img th:src="@{/img/SharkTicket.svg}" width="100%">
+    </div>
+    <div class="ren">
+        <img th:src="@{/img/iiiiii.svg}" width="104%">
+    </div>
+
+    <form th:action="@{/user/saveschedule}" th:object="${schedule}" method="post">
+        <div class="form-group row"> <img th:src="@{/img/clock.svg}">
+            <label class="col-4 col-form-label"></label>
+            <div class="col-8">
+                <select class="form-control" name="time" th:field="*{time}">
+                    <option value="06:00">6:00 </option>
+                    <option value="06:30">6:30 </option>
+                    <option value="07:00">7:00 </option>
+                    <option value="07:30">7:30 </option>
+                    <option value="08:00">8:00 </option>
+                    <option value="08:30">8:30 </option>
+                    <option value="09:00">9:00 </option>
+                    <option value="09:30">9:30 </option>
+                    <option value="10:00">10:00 </option>
+                    <option value="10:30">10:30 </option>
+                    <option value="11:00">11:00 </option>
+                    <option value="11:30">11:30 </option>
+                    <option value="12:00">12:00 </option>
+                    <option value="12:30">12:30 </option>
+                    <option value="13:00">13:00 </option>
+                    <option value="13:30">13:30 </option>
+                    <option value="14:00">14:00 </option>
+                    <option value="14:30">14:30 </option>
+                    <option value="15:00">15:00 </option>
+                    <option value="15:30">15:30 </option>
+                    <option value="16:00">16:00 </option>
+                    <option value="16:30">16:30 </option>
+                    <option value="17:00">17:00 </option>
+                    <option value="17:30">17:30 </option>
+
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label"><img th:src="@{/img/ghe.svg}"></label>
+            <div class="col-8">
+                <input type="number" th:field="*{orderSeats}" class="form-control" id="oderSeats" min="1" max="28" onchange="TinhTong()"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label"><img th:src="@{/img/date.svg}"> </label>
+            <div class="col-8">
+                <input type="date" th:field="*{dateSeats}" class="form-control" required/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label"><img th:src="@{/img/tuyen.svg}"> </label>
+            <div class="col-8">
+                <select class="form-control" name="place" th:field="*{place}">
+                    <option value="Hà Nội - Bắc Giang">Hà Nội - Bắc Giang</option>
+                    <option value="Bắc Giang - Hà Nội">Bắc Giang - Hà Nội</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label"> <img th:src="@{/img/voucher.png}" width="30px"/> </label>
+            <div class="col-8">
+                <select id="voucher" class="form-control" name="voucher" th:field="*{voucher}" onchange="TinhTong()" >
+                    <option value="No Voucher">No Voucher </option>
+                    <option value="VC10K">VC10K </option>
+                    <option value="VC20K">VC20K </option>
+                    <option value="VCG5P">VCG5P </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+
+            <label class="col-4 col-form-label"><img th:src="@{/img/money.png}" width="30px"/> </label>
+            <div class="col-8">
+                <span id="kq" style="margin-left: 80px"></span>
+
+            </div>
+        </div>
+        <p style="color: red" th:text="${ERROR}"></p>
+        <div>
+            <button type="submit" class="btn btn-primary" >Sign Up</button>
+        </div>
+
+
+
+        <!--        <button type="button" onclick="TinhTong()">Tính tổng</button> <br>-->
+
+    </form>
+
+
+
+</div>
+
+</body>
+
+</html>
+<script>
+    function TinhTong(){
+
+        var x = document.querySelector('#oderSeats').value;
+        var text= document.getElementById("voucher").value;
+        var y;
+        x = parseFloat(x);
+
+        if(text ==="VC10K") { y= 10000;}
+        else if( text ==="VC20K") {y=20000;}
+        else  if(text === "VCG5P")  {y= x*80000 *5/100;}
+        else {y=0;}
+
+
+
+        var tong = x*80000 - y ;
+
+        document.querySelector('#kq').innerHTML = tong;
+
+
+    }
+
+
+</script>

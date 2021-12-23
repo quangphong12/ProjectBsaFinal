@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/Introduction.css}">
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="dropdown" style="float:left; left: 132px; top: 61px;">
+    <img th:src="@{/img/icon1.svg}" width="161.16">
+</div>
+<div class="dropdown" style="float:right; left:-132px; top:86.4px;">
+    <img th:src="@{/img/wave.png}">
+    <div class="dropdown-content">
+        <a href="/user/index_user">Trang chủ</a>
+        <a href="/user/introduction_user">Giới thiệu</a>
+        <a href="/user/orderbus">Vận tải hành khách</a>
+        <a href="/user/rentcar">Thuê xe</a>
+        <a href="/user/Voucher">Đổi Voucher</a>
+        <a href="/user/recruitment_user">Tuyển dụng</a>
+        <a href="/user/profile"> Thông tin cá nhân </a>
+        <a href="/account/logout">Logout</a>
+    </div>
+</div>
+
+<div class="w3-content w3-display-container">
+
+    <img class="mySlides" th:src="@{/img/giới thiệu công ty.png}" style="width:100%">
+    <img class="mySlides" th:src="@{/img/dịch vụ.png}" style="width:100%">
+    <img class="mySlides" th:src="@{/img/nhiều ưu đãi.png}" style="width:100%">
+    <img class="mySlides" th:src="@{/img/lien kết.png}" style="width:100%">
+
+    <a class="prev" onclick="[plusDivs(-1)]">&#10094;</a>
+    <a class="next" onclick="[plusDivs(1)]">&#10095;</a>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>
+</body>
+</html>

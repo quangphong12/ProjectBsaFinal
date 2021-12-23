@@ -1,0 +1,41 @@
+    body {
+        margin: 0;
+        background-color: #426EBD;
+        font-family: 'Montserrat Alternates', sans-serif;
+    }
+    
+    form {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        margin-left: 45%;
+        margin-top: 20%;
+        z-index: 3;
+    }
+    
+    .backgroud {
+        position: relative;
+        margin-left: 35%;
+        margin-top: -25%;
+    }
+    
+    button {
+        border-radius: 20px;
+        background-color: #426EBD;
+        opacity: 0.8;
+        margin-top: 20px;
+        margin-left: 5%;
+        width: 10%;
+        height: 30px;
+        color: #ffffff;
+    }
+    
+    label {
+        font-weight: 400;
+    }
+    
+    input {
+        border-radius: 20px;
+        background-color: #b1e1e9;
+        height: 20px;
+    }

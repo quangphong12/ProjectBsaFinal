@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo tài khoản</title>
+    <link rel="stylesheet" th:href="@{/css/register_account.css}">
+    <link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <form th:action="@{/account/save_new_account}" th:object="${account}" method="post">
+        <div class="form-group row">
+            <label class="col-4 col-form-label">Tên Đăng Nhập: </label>
+            <div class="col-8">
+                <input type="text" th:field="*{username}" class="form-control" required minlength="8" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Tên tài khoản tối thiểu 8 ký tự, phải bao gồm chữ viết thường và số " />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label">Mật khẩu: </label>
+            <div class="col-8">
+                <input type="password" th:field="*{password}" class="form-control" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Mật khẩu tối thiểu 8 ký tự và phải bao gồm ít nhất một chữ cái viết hoa, một chữ cái viết thường, một ký tự đặc biệt và một số" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label">Email: </label>
+            <div class="col-8">
+                <input type="email" th:name="email" class="form-control" title="Contact's email (format: xxx@xxx.xxx)" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" />
+            </div>
+        </div>
+        <p style="color: red" th:text="${ERROR}"></p>
+        <div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+
+        </div>
+    </form>
+
+
+    <div class="backgroud">
+        <img th:src="@{/img/core.svg}">
+    </div>
+
+
+</body>
+
+</html>

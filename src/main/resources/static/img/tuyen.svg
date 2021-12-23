@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3a328e;
+      }
+    </style>
+  </defs>
+  <g id="tuyen" transform="translate(-10 -10)">
+    <path id="Path_18" data-name="Path 18" class="cls-1" d="M22.5,10A12.5,12.5,0,1,0,35,22.5,12.494,12.494,0,0,0,22.5,10Zm0,1.974A10.526,10.526,0,1,1,11.974,22.5,10.557,10.557,0,0,1,22.5,11.974"/>
+    <path id="Path_19" data-name="Path 19" class="cls-1" d="M32.4,42.8l7.237-2.961L42.6,32.6l-7.237,3.026Zm5.132-5.789a.658.658,0,1,1-.658.658.622.622,0,0,1,.658-.658" transform="translate(-15.032 -15.166)"/>
+  </g>
+</svg>

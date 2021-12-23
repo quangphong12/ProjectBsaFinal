@@ -1,0 +1,108 @@
+body {
+    background-color: #426EBD;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+label {
+    font-size: 0px;
+}
+
+h3 {
+    font-size: 0px;
+}
+h1{
+    margin-left: 65px;
+    font-size: 30px;
+    
+}
+
+button {
+    top: 6rem;
+    left: 3rem;
+}
+
+.btn {
+    position: relative;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(60, 48, 140, 1) 0%, rgba(4, 118, 217, 1) 100%);
+    border-radius: 26px;
+    height: 44px;
+    width: 144px;
+}
+
+.btn:hover {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(60, 48, 140, 1) 0%, rgba(4, 118, 217, 1) 100%);
+    border-radius: 26px;
+}
+
+.btn:focus,
+.btn:active {
+    background-color: black;
+    transition: none;
+}
+
+.row {
+    border: 0px darkgrey solid;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+input.btn.btn-success {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+input.form-control {
+    border-radius: 20px;
+    font-size: 18px;
+    height: 80px;
+    color: #426EBD;
+    border: 2px solid #fff;
+    background-color: #CAE1F6;
+    margin-left: -30px;
+}
+
+input.form-control::placeholder {
+    color: #426EBD;
+}
+
+form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.background {
+    /* background:red; */
+    position: absolute;
+    top: -10rem;
+    left: 10px;
+    right: 10px;
+    z-index: -1;
+}
+
+.form-group {
+    margin-bottom: -10px;
+}
+
+form img {
+    width: 3rem;
+    position: relative;
+    top: 4rem;
+    left: -4rem;
+}
+
+#reg {
+    position: relative;
+    margin: -3.5rem;
+    font-size: 16px;
+    left: 3.5rem;
+}
+
+#forgotpass {
+    position: relative;
+    margin: 1.5rem;
+    font-size: 16px;
+    left: 22rem;
+}

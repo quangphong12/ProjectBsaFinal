@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" th:href="@{/css/fullhistory.css}">
+<link rel = "icon" th:href ="@{/img/icon.svg}" type = "image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch sử đặt xe và chuyến đi</title>
+
+</head>
+<body>
+
+
+<div class="dropdown " style="float:left; left: 132px; top: 61px; ">
+    <img th:src="@{/img/icon1.svg}" width="161.16 ">
+</div>
+<div class="bang">
+    <h1> Lịch sử đặt vé xe</h1>
+    <div class="container col-6" id="test">
+        <table class="table table-active" border="1">
+            <tr>
+                <th>Mã vé</th>
+                <th>Thời gian đi </th>
+                <th>Số ghế đặt</th>
+                <th>Ngày đi</th>
+                <th>Chuyến đi</th>
+                <th>Ngày đặt</th>
+                <th>Mã khuyến mãi</th>
+                <th>Tổng tiền</th>
+                <th>Đánh giá</th>
+                <th>Trạng thái</th>
+            </tr>
+            <tr th:each="schedule : ${schedule}">
+                <td th:text="${schedule.idSchedule}"></td>
+                <td th:text="${schedule.time}"></td>
+                <td th:text="${schedule.orderSeats}"></td>
+                <td th:text="${schedule.dateSeats}"></td>
+                <td th:text="${schedule.place}"></td>
+                <td th:text="${schedule.date}"></td>
+                <td th:text="${schedule.voucher}"></td>
+                <td th:text="${schedule.total_money}"></td>
+                <td th:text="${schedule.comment}"></td>
+                <td th:text="${schedule.check}"></td>
+                <td>
+                    <a th:href="@{/user/comment_schedule?id={id}(id=${schedule.idSchedule})}" class="btn btn-primary">Đánh giá</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <h1> Lịch sử thuê xe</h1>
+    <div class="container col-6" id="test">
+
+        <table class="table table-active" border="1">
+            <tr>
+                <th>Mã vé</th>
+                <th>Ngày thuê</th>
+                <th>Ngày trả </th>
+                <th>Địa điểm</th>
+                <th>Thành phố</th>
+                <th>Loại xe</th>
+                <th>Tên hãng xe mong muốn</th>
+                <th>Hình thức thuê</th>
+                <th>Đánh giá</th>
+                <th>Trạng thái</th>
+            </tr>
+            <tr th:each="rent : ${rent}">
+                <td th:text="${rent.id_rent}"></td>
+                <td th:text="${rent.dateTimeBegin}"></td>
+                <td th:text="${rent.dateTimeEnd}"></td>
+                <td th:text="${rent.place}"></td>
+                <td th:text="${rent.city}"></td>
+                <td th:text="${rent.type}"></td>
+                <td th:text="${rent.carCompany}"></td>
+                <td th:text="${rent.typeRent}"></td>
+                <td th:text="${rent.comment}"></td>
+                <td th:text="${rent.check}"></td>
+                <td>
+                    <a th:href="@{/user/comment_rent?id={id}(id=${rent.id_rent})}" class="btn btn-primary">Đánh giá</a>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <img th:src="@{/img/footer1.png}" width="100%" height="50%" >
+</div>
+
+
+<div class="menu" >
+    <a href="/user/profile"> <img th:src="@{/img/Group 7.svg}"> </a> <br>
+    <a href="/user/full_history"> <img th:src="@{/img/Group 4.svg}"> </a><br>
+    <a href="/user/info_voucher"><img src="https://img.icons8.com/external-flat-02-chattapat-/64/000000/external-gift-black-friday-flat-02-chattapat-.png" width="50px"/> </a> <br>
+</div>
+
+</body>
+</html>
