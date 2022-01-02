@@ -136,7 +136,12 @@
 
         if(text ==="VC10K") { y= 10000;}
         else if( text ==="VC20K") {y=20000;}
-        else  if(text === "VCG5P")  {y= x*80000 *5/100;}
+        else  if(text === "VCG5P")  {
+            y= x*80000 *5/100;
+            if( y> 50000){
+                y = 50000;
+            }
+        }
         else {y=0;}
 
 
