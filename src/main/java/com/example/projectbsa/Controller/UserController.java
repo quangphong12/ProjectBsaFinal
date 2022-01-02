@@ -428,6 +428,9 @@ public class UserController {
             int count= voucherService.countVCG5P(id);
             if(count>0){
                 double discount = 80000*seats*0.05 ;
+                if(discount > 50000){
+                    discount = 50000;
+                }
                 int total = 80000*seats -((int) discount) ;
                 schedule.setOrderSeats(seats);
                 schedule.setVoucher(voucher);
