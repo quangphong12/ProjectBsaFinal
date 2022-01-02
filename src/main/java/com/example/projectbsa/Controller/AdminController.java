@@ -266,7 +266,7 @@ public class AdminController {
         System.out.println(schedule.toString());
         scheduleService.save(schedule);
         if(schedule.getCheck().equals("Done")){
-            int point=schedule.getOrderSeats()*100;
+            int point=schedule.getOrderSeats()*1000;
             userService.updatePoint(point,schedule.getId());
         }
         if(schedule.getCheck().equals("Cancel")){
