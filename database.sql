@@ -20,7 +20,7 @@ create table [User](
 	gender nvarchar(20),
 	point int not null ,
 	phone varchar(20) not null,
-	email varchar(20) UNIQUE,
+	email varchar(80) UNIQUE,
 	[address] nvarchar(200) not null,
 	date_of_birth VARCHAR(20) not null,
 	CMND bigint not null
