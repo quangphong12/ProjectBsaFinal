@@ -31,6 +31,11 @@ public class AccountServiceImpl implements AccountService {
     JavaMailSender javaMailSender;
 
     @Override
+    public void deleteAccount(String username) {
+        accountRepository.deleteAccount(username);
+    }
+    
+    @Override
     public boolean checkLogin(String username, String password) {
         Optional<Account> optionalAccount= accountRepository.findById(username);
         if(optionalAccount.isPresent() && optionalAccount.get().getPassword().equals(password) && optionalAccount.get().isEnabled()){
