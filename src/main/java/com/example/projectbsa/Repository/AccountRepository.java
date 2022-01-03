@@ -18,4 +18,9 @@ public interface AccountRepository extends JpaRepository<Account, String> {
 
     @Query(value = "SELECT * FROM Account a WHERE a.verification_code = ?1", nativeQuery = true)
     Account findByVerificationCode(String code);
+    
+    @Modifying(clearAutomatically = true)
+    @Transactional
+    @Query(value="DELETE FROM Account WHERE username=?1",nativeQuery = true)
+    void deleteAccount(String username);
 }
