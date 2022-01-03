@@ -118,7 +118,8 @@ public class AdminController {
     ///Delete User
     @RequestMapping(value="/delete_user",method=RequestMethod.GET)
     public String deleteUser(@RequestParam("id")Long userId){
-        userService.deleteUser(userId);
+        User user= userService.findUserById(userId);
+        accountService.deleteAccount(user.getUsername());
         return "redirect:/admin/full_user";
     }
     ///================== Voucher ==================///
