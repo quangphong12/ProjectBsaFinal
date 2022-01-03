@@ -9,6 +9,8 @@ import java.io.UnsupportedEncodingException;
 @Service
 public interface AccountService {
 
+    void deleteAccount(String username);
+    
     boolean checkLogin(String username, String password);
 
     boolean checkRole(String username);
